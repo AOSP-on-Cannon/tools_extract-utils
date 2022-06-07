@@ -1073,12 +1073,6 @@ EOF
     write_makefile_header "$PRODUCTMK"
     write_blueprint_header "$ANDROIDBP"
 
-    cat << EOF >> "$ANDROIDBP"
-soong_namespace {
-}
-
-EOF
-
     [ "$COMMON" -eq 1 ] && local DEVICE="$DEVICE_COMMON"
     cat << EOF >> "$PRODUCTMK"
 PRODUCT_SOONG_NAMESPACES += \\
